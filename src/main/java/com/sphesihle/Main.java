@@ -10,11 +10,6 @@ public class Main {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 
-        // I want a Bean of type Employee
-
-        Employee employeeBean = context.getBean(Employee.class);
-
-        employeeBean.displayName();
 
 
     }

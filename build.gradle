@@ -13,12 +13,43 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 
-    // Add the Spring Context dependency
-    implementation "org.springframework:spring-context:5.3.19"
+
+    // Add the Spring Context dependency , Soring Data JPA
+
+
+    // Spring Core and Spring MVC
+    implementation 'org.springframework:spring-context:5.3.19'
+    implementation 'org.springframework:spring-webmvc:5.3.10'
+
+    // Spring Data JPA and JDBC
+    implementation "org.springframework:spring-jdbc:5.3.10"
+    implementation "org.springframework:spring-tx:5.3.10"
+    implementation "org.springframework:spring-orm:5.3.10"
+    implementation "org.springframework.data:spring-data-jpa:2.5.3"
+
 
     // Add the Lombok dependency
     implementation 'org.projectlombok:lombok:1.18.20'
 
+    // Other commonly used dependencies
+    implementation "org.springframework:spring-web:5.3.10.RELEASE"
+    implementation "javax.servlet:jstl:1.2"
+    implementation "javax.servlet:javax.servlet-api:4.0.1"
+
+    // JPA API
+    implementation "javax.persistence:javax.persistence-api:2.2"
+
+    // Hibernate Core and EntityManager
+    implementation "org.hibernate:hibernate-core:5.5.6.Final"
+    implementation "org.hibernate:hibernate-entitymanager:5.5.6.Final"
+
+    // H2 Database
+    implementation "com.h2database:h2:2.1.214"
+
+    implementation 'ch.qos.logback:logback-classic:1.2.9'
+
+    // MapStruct
+    implementation "org.mapstruct:mapstruct:1.5.0.Final"
 }
 
 test {
