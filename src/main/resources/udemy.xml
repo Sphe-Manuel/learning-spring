@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- I want to inject a SourceLocator - StoreLocator Bean -->
+    <bean id="storeLocator" class="com.sphesihle.udemy.oic.StoreLocator"/>
+
+    <!-- I want to inject a SourceLocator - StoreLocator or KioskLocator Bean -->
+    <bean id="kioskLocator" class="com.sphesihle.udemy.oic.KioskLocator"/>
+
+    <!--  Constructor Injection with a single reference -->
+    <bean id="rentalLocationStore" class="com.sphesihle.udemy.oic.RentalService">
+        <constructor-arg ref="storeLocator" />
+    </bean>
+
+    <!-- Constructor injection , kioskLocator ref   -->
+    <bean id="rentalLocationKiosk" class="com.sphesihle.udemy.oic.RentalService">
+        <constructor-arg ref="kioskLocator" />
+    </bean>
+
+
+
+
+</beans>
